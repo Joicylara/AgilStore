@@ -1,0 +1,35 @@
+Exemplos de dados para serem adicionados
+
+[
+  {
+    nomeProduto": "Smartphone XYZ",
+    "categoria": "Smartphones",
+    "quantidadeEstoque": 50,
+    "preco": 999.99
+  },
+  {
+    "nomeProduto": "Laptop ABC",
+    "categoria": "Laptops",
+    "quantidadeEstoque": 30,
+    "preco": 2499.99
+  },
+  {
+    "nomeProduto": "Fone de Ouvido Bluetooth",
+    "categoria": "Acessórios",
+    "quantidadeEstoque": 100,
+    "preco": 199.99
+  },
+  {
+    "nomeProduto": "Carregador USB-C",
+    "categoria": "Acessórios",
+    "quantidadeEstoque": 150,
+    "preco": 49.99
+  },
+  {
+    "nomeProduto": "Cabos HDMI",
+    "categoria": "Acessórios",
+    "quantidadeEstoque": 200,
+    "preco": 39.99
+  }
+]
+  

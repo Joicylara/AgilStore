@@ -1,0 +1,37 @@
+import { Router } from "express";
+import { addProduto, atualizarProduto, buscarProdutoId, deletarProduto, listarProdutos } from "../controllers/agilStore.controller.js";
+
+
+const rota =  Router();
+
+rota.post("/novoProduto", (req, res) =>{
+    const { nomeProduto, categoria, quantidadeEstoque, preco } = req.body;
+    const novoProduto = addProduto(nomeProduto, categoria, quantidadeEstoque, preco);
+    res.status(201).json({ novoProduto });
+});
+
+rota.get("/listaProdutos", (req, res) =>{
+    const listaProdutos = listarProdutos();
+    res.status(200).json({ listaProdutos });
+});
+
+rota.get("/buscaProduto/:id", (req, res) =>{
+    const { id } = req.params;
+    const produtoId = buscarProdutoId(id);
+    res.status(200).json({ produtoId});
+});
+
+rota.put("/atualizarProduto/:id", (req, res) =>{
+    const { id } = req.params;
+    const { nomeProduto, categoria, quantidadeEstoque, preco } = req.body;
+    const produtoAtualizado = atualizarProduto(id, nomeProduto, categoria, quantidadeEstoque, preco);
+    res.status(200).json({ produtoAtualizado });
+});
+
+rota.delete("/deletaProduto/:id", (req, res) =>{
+    const { id } = req.params;
+    const produtoDeletado = deletarProduto(id);
+    res.status(200).json({produtoDeletado});
+});
+
+export { rota }
