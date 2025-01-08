@@ -11,7 +11,8 @@ rota.post("/novoProduto", (req, res) =>{
 });
 
 rota.get("/listaProdutos", (req, res) =>{
-    const listaProdutos = listarProdutos();
+    const { categoria, ordenarPor } = req.query;
+    const listaProdutos = listarProdutos(categoria, ordenarPor);
     res.status(200).json({ listaProdutos });
 });
 
