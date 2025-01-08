@@ -28,6 +28,10 @@ const escreverArquivo = (dado) =>{
 
 export const addProduto = (nomeProduto, categoria, quantidadeEstoque, preco) => {
 
+    if (!nomeProduto || !categoria || quantidadeEstoque === undefined || preco === undefined) {
+        return "Todos os campos (nome, categoria, quantidade e preço) são obrigatórios";
+    }
+
     let dados =lerArquivo();
     
     const produtoExistente = dados.produtos.some(produto => produto.nomeProduto === nomeProduto && produto.categoria === categoria);
@@ -64,11 +68,42 @@ export const buscarProdutoId = (idProduto) =>{
     }
 };
 
+export const buscarProdutoNome = (nomeProduto) =>{
+    let dados =  lerArquivo();
+    let nomeExiste = dados.produtos.filter(produto => produto.nomeProduto.toLowerCase().includes(nomeProduto.toLowerCase()));
+    if(nomeExiste.length > 0){
+        return nomeExiste;
+    }else{
+        return "Não existe produto com esse nome"
+    }
+};
+
+export const buscaProdutoCategoria = (categoria) =>{
+    let dados = lerArquivo();
+    let categoriaExiste = dados.produtos.filter(produto => produto.categoria.toLowerCase().includes(categoria.toLowerCase()));
+    if(categoriaExiste.length > 0){
+        return categoriaExiste;
+    }else{
+        return "Não existe essa categoria"
+    }
+};
+
 export const atualizarProduto = (idProduto, nomeProduto, categoria, quantidadeEstoque, preco) =>{
+    
+    if (!nomeProduto || !categoria || quantidadeEstoque === undefined || preco === undefined) {
+        return "Todos os campos (nome, categoria, quantidade e preço) são obrigatórios";
+    }
+    
     let dados = lerArquivo();
     const index = dados.produtos.findIndex(produto => produto.idProduto === idProduto);
 
     if(index !== -1){
+        const produtoExiste = dados.produtos.some((produto, i) =>
+            produto.nomeProduto === nomeProduto && produto.categoria === categoria && i !== index
+        );
+        if(produtoExiste){
+            return "Esse produto já existe"
+        }
         dados.produtos[index] = {
             idProduto,
             nomeProduto,
