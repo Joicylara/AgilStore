@@ -53,9 +53,26 @@ export const addProduto = (nomeProduto, categoria, quantidadeEstoque, preco) => 
     return novoProduto;
 };
 
-export const listarProdutos = () => {
+export const listarProdutos = (categoria, ordenar) => {
     let dados = lerArquivo();
-    return dados.produtos;
+    let produtos = dados.produtos;
+    
+
+    if(categoria){
+        let normalizarTexto = (texto) => texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        produtos = produtos.filter(produto => normalizarTexto(produto.categoria).includes(normalizarTexto(categoria)));
+    }
+
+    if(ordenar){
+        produtos.sort((a,b) =>{
+            if(ordenar === 'nome') return a.nomeProduto.localeCompare(b.nomeProduto);
+            if(ordenar === 'quantidade') return a.quantidadeEstoque - b.quantidadeEstoque;
+            if(ordenar === 'preco') return a.preco - b.preco;
+            return 0;
+        });
+    }
+
+    return produtos;
 };
 
 export const buscarProdutoId = (idProduto) =>{
@@ -80,7 +97,14 @@ export const buscarProdutoNome = (nomeProduto) =>{
 
 export const buscaProdutoCategoria = (categoria) =>{
     let dados = lerArquivo();
-    let categoriaExiste = dados.produtos.filter(produto => produto.categoria.toLowerCase().includes(categoria.toLowerCase()));
+    const normalizarTexto = (texto) =>{
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+    }
+    
+    let categoriaNormalizada = normalizarTexto(categoria);
+
+    let categoriaExiste = dados.produtos.filter(produto => normalizarTexto(produto.categoria).includes(categoriaNormalizada));
     if(categoriaExiste.length > 0){
         return categoriaExiste;
     }else{
