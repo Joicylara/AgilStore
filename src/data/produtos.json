@@ -1,3 +1,39 @@
 {
-  "produtos": []
+  "produtos": [
+    {
+      "idProduto": "2e9eb248-0655-4df7-bd62-588ccf5fd8be",
+      "nomeProduto": "Laptop ABC",
+      "categoria": "Laptops",
+      "quantidadeEstoque": 30,
+      "preco": 2499.99
+    },
+    {
+      "idProduto": "6f9846e5-3b25-44c8-8a21-7b3bc7cded24",
+      "nomeProduto": "Fone de Ouvido Bluetooth",
+      "categoria": "Acessórios",
+      "quantidadeEstoque": 100,
+      "preco": 199.99
+    },
+    {
+      "idProduto": "d0cc6424-7be4-4bba-8cfe-279f246dfc02",
+      "nomeProduto": "Fone de Ouvido sem fio",
+      "categoria": "Acessórios",
+      "quantidadeEstoque": 100,
+      "preco": 199.99
+    },
+    {
+      "idProduto": "15cfa48e-aed3-4284-b761-9f0d923d3176",
+      "nomeProduto": "Fone de Ouvido com micro-fone",
+      "categoria": "Acessórios",
+      "quantidadeEstoque": 100,
+      "preco": 199.99
+    },
+    {
+      "idProduto": "234ff92e-ab03-4f71-932f-ad8c0e0f144f",
+      "nomeProduto": "Fone de Ouvido sem ruido",
+      "categoria": "Acessórios",
+      "quantidadeEstoque": 100,
+      "preco": 199.99
+    }
+  ]
 }
