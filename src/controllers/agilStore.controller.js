@@ -95,6 +95,12 @@ export const buscarProdutoNome = (nomeProduto) =>{
     }
 };
 
+export const buscaTodasCategorias = () => {
+    let dados = lerArquivo(); 
+    const categorias = [...new Set(dados.produtos.map(produto => produto.categoria))]; 
+    return categorias;
+};
+
 export const buscaProdutoCategoria = (categoria) =>{
     let dados = lerArquivo();
     const normalizarTexto = (texto) =>{

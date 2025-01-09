@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addProduto, atualizarProduto, buscaProdutoCategoria, buscarProdutoId, buscarProdutoNome, deletarProduto, listarProdutos } from "../controllers/agilStore.controller.js";
+import { addProduto, atualizarProduto, buscaProdutoCategoria, buscarProdutoId, buscarProdutoNome, buscaTodasCategorias, deletarProduto, listarProdutos } from "../controllers/agilStore.controller.js";
 
 
 const rota =  Router();
@@ -26,6 +26,11 @@ rota.get("/buscaNome/:nome", (req,res) =>{
     const { nome } = req.params;
     const produtoNome = buscarProdutoNome(nome);
     res.status(200).json({ produtoNome });
+});
+
+rota.get("/buscaTodasCategorias", (req, res) =>{
+    const categoria = buscaTodasCategorias();
+    res.status(200).json({ categoria });
 });
 
 rota.get("/buscaCategoria/:categoria", (req, res) =>{

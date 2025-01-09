@@ -2,10 +2,10 @@
   "produtos": [
     {
       "idProduto": "2e9eb248-0655-4df7-bd62-588ccf5fd8be",
-      "nomeProduto": "Laptop ABC",
+      "nomeProduto": "Notebook",
       "categoria": "Laptops",
-      "quantidadeEstoque": 30,
-      "preco": 2499.99
+      "quantidadeEstoque": "300",
+      "preco": "2499.99"
     },
     {
       "idProduto": "6f9846e5-3b25-44c8-8a21-7b3bc7cded24",
@@ -34,6 +34,34 @@
       "categoria": "Acessórios",
       "quantidadeEstoque": 100,
       "preco": 199.99
+    },
+    {
+      "idProduto": "7146aceb-1e2a-4da1-ac49-c88afd3042f7",
+      "nomeProduto": "Fone de ouvido rosa",
+      "categoria": "Acessórios",
+      "quantidadeEstoque": "100",
+      "preco": "15.80"
+    },
+    {
+      "idProduto": "b82819ea-c1e5-4613-8aa3-4ef9e454885f",
+      "nomeProduto": "Monitor LG",
+      "categoria": "monitor",
+      "quantidadeEstoque": 500,
+      "preco": 3089.3
+    },
+    {
+      "idProduto": "8246a7ce-4c87-41d5-b569-d499bfca92f5",
+      "nomeProduto": "Monitor CSS",
+      "categoria": "monitor",
+      "quantidadeEstoque": 500,
+      "preco": 3089.3
+    },
+    {
+      "idProduto": "88ccd02f-6cbf-4e5d-be09-97ee6e79c9fa",
+      "nomeProduto": "Carregador USB-C",
+      "categoria": "Acessórios",
+      "quantidadeEstoque": 120,
+      "preco": 10.9
     }
   ]
 }
