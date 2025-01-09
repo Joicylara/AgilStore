@@ -66,7 +66,7 @@ export const listarProdutos = (categoria, ordenar) => {
     if(ordenar){
         produtos.sort((a,b) =>{
             if(ordenar === 'nome') return a.nomeProduto.localeCompare(b.nomeProduto);
-            if(ordenar === 'quantidade') return a.quantidadeEstoque - b.quantidadeEstoque;
+            if(ordenar === 'quantidade') return Number(a.quantidadeEstoque) - Number(b.quantidadeEstoque);
             if(ordenar === 'preco') return a.preco - b.preco;
             return 0;
         });

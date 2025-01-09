@@ -1,13 +1,6 @@
 {
   "produtos": [
     {
-      "idProduto": "2e9eb248-0655-4df7-bd62-588ccf5fd8be",
-      "nomeProduto": "Notebook",
-      "categoria": "Laptops",
-      "quantidadeEstoque": "300",
-      "preco": "2499.99"
-    },
-    {
       "idProduto": "6f9846e5-3b25-44c8-8a21-7b3bc7cded24",
       "nomeProduto": "Fone de Ouvido Bluetooth",
       "categoria": "Acessórios",
@@ -36,13 +29,6 @@
       "preco": 199.99
     },
     {
-      "idProduto": "7146aceb-1e2a-4da1-ac49-c88afd3042f7",
-      "nomeProduto": "Fone de ouvido rosa",
-      "categoria": "Acessórios",
-      "quantidadeEstoque": "100",
-      "preco": "15.80"
-    },
-    {
       "idProduto": "b82819ea-c1e5-4613-8aa3-4ef9e454885f",
       "nomeProduto": "Monitor LG",
       "categoria": "monitor",
@@ -62,6 +48,20 @@
       "categoria": "Acessórios",
       "quantidadeEstoque": 120,
       "preco": 10.9
+    },
+    {
+      "idProduto": "b6aa8065-afa3-4f1b-a2a2-4d8f6a2fb6a1",
+      "nomeProduto": "Smartphone A22",
+      "categoria": "Smartphone",
+      "quantidadeEstoque": 1200,
+      "preco": 2890.67
+    },
+    {
+      "idProduto": "7ecf5998-79f6-4cdd-88f0-16c6089b801e",
+      "nomeProduto": "Cabos HDMI",
+      "categoria": "Acessórios",
+      "quantidadeEstoque": 1500,
+      "preco": 59.9
     }
   ]
 }
