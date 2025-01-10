@@ -143,12 +143,11 @@ A API foi testada utilizando o Insomnia, uma ferramenta para realizar requisiç�
 </div>
 
 ### 🎥 Vídeo demonstrativo do teste realizado no front-end
-Para complementar o projeto, e fazer alguns testes, foi desenvolvido um front-end que consome as rotas da API e fornece uma interface gráfica para gerenciar os produtos. O repositório com o código-fonte do front-end está nesse link [aqui](https://github.com/Joicylara/AgilStore_fron-end), também tem o deploy do front-end, porém tem que esta com a API rodando localmente para funcionar, link do [deploy](https://agil-store-fron-end.vercel.app/)
+Para complementar o projeto, e fazer alguns testes, foi desenvolvido um front-end que consome as rotas da API e fornece uma interface gráfica para gerenciar os produtos. O repositório com o código-fonte do front-end está nesse link [aqui](https://github.com/Joicylara/AgilStore_fron-end), também tem o deploy do front-end, porém tem que esta com a API rodando localmente para funcionar, link do [deploy](https://agil-store-fron-end.vercel.app/). Tem um vídeo mostrando o funcionamento no front-end aqui no repositório.
 
-<div align="center">
-  <h3>Vídeo do Sistema</h3>
-  <video width="600" controls>
-    <source src="assets\AgilStore - Google Chrome 2025-01-09 19-59-25.mp4" type="video/mp4">
-    Seu navegador não suporta o elemento de vídeo.
-  </video>
-</div>
+
+
+## Conclusão
+A API AgilStore é uma solução eficiente para o gerenciamento de inventário, permitindo que uma loja administre produtos de maneira prática e escalável. Este projeto ilustra a integração entre uma aplicação back-end e front-end.
+
+Obrigado por explorar este projeto, caso tenha dúvidas ou sugestões, abra uma issue ou entre em contato.
