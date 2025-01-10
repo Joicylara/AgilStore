@@ -145,6 +145,13 @@ A API foi testada utilizando o Insomnia, uma ferramenta para realizar requisiç�
 ### 🎥 Vídeo demonstrativo do teste realizado no front-end
 Para complementar o projeto, e fazer alguns testes, foi desenvolvido um front-end que consome as rotas da API e fornece uma interface gráfica para gerenciar os produtos. O repositório com o código-fonte do front-end está nesse link [aqui](https://github.com/Joicylara/AgilStore_fron-end), também tem o deploy do front-end, porém tem que esta com a API rodando localmente para funcionar, link do [deploy](https://agil-store-fron-end.vercel.app/). Tem um vídeo mostrando o funcionamento no front-end aqui no repositório.
 
+<div align="center"> 
+  <h3>Vídeo do teste no front-end</h3>
+  <img src="src/assets/AgilStore-.gif" width="600px">
+  <p>Testando as funções da API de uma forma mais interativa utilizando o front-end.</p>
+</div>
+
+
 ## Links importantes
 [AgilStore front-end](https://github.com/Joicylara/AgilStore_fron-end)
 
