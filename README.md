@@ -52,15 +52,103 @@ Irei explicar sobre o 2xx, que foi utilizado na aplicação.
  **Clonando o Repositório:**
 Para clonar o projeto, execute o seguinte comando:
 ```
-git clone https://github.com/SeuUsuario/NomeDoRepositorio.git
-cd NomeDoRepositorio
+git clone https://github.com/Joicylara/AgilStore.git
+cd AgilStore
 ```
 **Instalando Dependências:**
 ```
 npm i
 ```
-**Executando o Projeto:**
+**Executando o Projeto:** Esse comando utiliza o Nodemon, que facilita na produção, tendo em vista que ele reinicia automaticamente a aplicação
 ```
 npm run dev
 ```
+**Acesse a API no navegador ou ferramenta de testes:**
+
+A API estará rodando localmente com a URL: http://localhost:3000, foi até feito o deploy, porém como foi utilizado um arquivo JSON para a persistência dos dados não houve êxito, pois o arquivo é local.
+
+## ⚙ Funcionalidades
+
+| **Método** | **Rota**                  | **Descrição**                                                                                       | **Parâmetros/Body**                                                                                  |
+|------------|---------------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| `POST`     | `/novoProduto`            | Adiciona um novo produto ao inventário.                                                           | **Body:** `{ "nomeProduto": string, "categoria": string, "quantidadeEstoque": number, "preco": number }` |
+| `GET`      | `/listaProdutos`          | * Lista todos os produtos no inventário, com opção de filtragem e ordenação.                         | **Query:** `categoria=string`, `ordenarPor=string` (opcional)                                       |
+| `GET`      | `/buscaProduto/:id`       | Busca um produto específico pelo ID.                                                             | **Params:** `id=string`                                                                             |
+| `GET`      | `/buscaNome/:nome`        | Busca produtos pelo nome ou parte do nome.                                                       | **Params:** `nome=string`                                                                           |
+| `GET`      | `/buscaTodasCategorias`   | Lista todas as categorias existentes no inventário.                                              | N/A                                                                                                 |
+| `GET`      | `/buscaCategoria/:categoria` | Busca todos os produtos de uma categoria específica.                                              | **Params:** `categoria=string`                                                                      |
+| `PUT`      | `/atualizarProduto/:id`   | Atualiza informações de um produto existente no inventário.                                       | **Params:** `id=string` <br> **Body:** `{ "nomeProduto": string, "categoria": string, "quantidadeEstoque": number, "preco": number }` |
+| `DELETE`   | `/deletaProduto/:id`      | Remove um produto do inventário pelo ID.                                                         | **Params:** `id=string`                                                                             |
+
+
+obs: * Em `/listaProdutos` pode ser usado de várias formas, como por exemplo:
+
+  Sem filtro ou ordenação (todos os produtos):
+  `http://localhost:3000/listaProdutos`
   
+  Somente por categoria:
+  `http://localhost:3000/listaProdutos?categoria=acessorio`
+  
+  Somente por ordenação (por nome):
+  `http://localhost:3000/listaProdutos?ordenarPor=nome`
+
+### 📚 Organização do projeto
+```
+  📂AgilStore
+   └───src
+      ├───controllers         
+      │   └───agilStore.controller.js
+      ├───data               
+      │   └───produtos.json
+      ├───models              
+      │   └───AgilStore.model.js
+      ├───routes              
+      │   └───agilStore.routes.js
+      └───server.js           
+  ├───.gitignore            
+  ├───exemplo de dados.txt   
+  ├───package-lock.json     
+  └───package.json          
+
+```
+**Descrição dos arquivos**
+
+- **`agilStore.controller.js`**: Controlador que gerencia as requisições e lógica de negócios do AgilStore.
+- **`produtos.json`**: Arquivo que contém os dados dos produtos utilizados na aplicação.
+- **`AgilStore.model.js`**: Define o modelo de dados da aplicação, representando as entidades utilizadas.
+- **`agilStore.routes.js`**: Define as rotas da aplicação e os endpoints da API.
+- **`server.js`**: Arquivo de configuração e inicialização do servidor Express.
+- **`.gitignore`**: Arquivo que contém as configurações de quais arquivos ou pastas devem ser ignorados pelo Git.
+- **`exemplo de dados.txt`**: Arquivo contendo um exemplo de dados para fins de testes ou inicialização.
+- **`package-lock.json`**: Arquivo que registra a versão exata das dependências do projeto.
+- **`package.json`**: Arquivo de configuração do Node.js, contendo as dependências e scripts do projeto.
+
+  ## 🧪 Testes
+A API foi testada utilizando o Insomnia, uma ferramenta para realizar requisições HTTP. Os resultados demonstram o funcionamento correto das rotas.
+
+### 🖼 Exemplos de testes com prints
+
+<div align="center">
+  <h3>Atualiza os dados de acordo com o ID(pput)</h3>
+  <img src="https://drive.google.com/uc?export=view&id=1y4-_xULygTbMKHSHSyUCTSvjWkqLl9zS" width="600px">
+  <p>No exemplo foi colocado em formato json os dados e modificado o campo desejado, no lado direito mostra a atualização concluida</p>
+
+  <h3>Deleta produto de acordo com o ID (delete)</h3>
+  <img src="https://drive.google.com/uc?export=view&id=1g2OgB53vVpY98fhbM1ozLwT-y8MKtXEB" width="600px">
+<p>Como mostra no exemplo é necessário apenas passar o id do produto que deseja excluir no parâmetro</p>
+
+  <h3>Lista todos os produtos (get)</h3>
+  <img src="https://drive.google.com/uc?export=view&id=1CcaIwI-IDuxvQev3niGM5PUWM5eF986B" width="600px">
+  <p>Na demosntração do exemplo ele esta listando por ordem alfabética, sendo o filtro desejado passado no parâmetro, que várias de acordo o tipo do filtro, foi explicado sobre o endpoit na tabela acima.</p>
+</div>
+
+### 🎥 Vídeo demonstrativo do teste realizado no front-end
+Para complementar o projeto, e fazer alguns testes, foi desenvolvido um front-end que consome as rotas da API e fornece uma interface gráfica para gerenciar os produtos. O repositório com o código-fonte do front-end está nesse link [aqui](https://github.com/Joicylara/AgilStore_fron-end), também tem o deploy do front-end, porém tem que esta com a API rodando localmente para funcionar, link do [deploy](https://agil-store-fron-end.vercel.app/)
+
+<div align="center">
+  <h3>Vídeo do Sistema</h3>
+  <video width="600" controls>
+    <source src="assets\AgilStore - Google Chrome 2025-01-09 19-59-25.mp4" type="video/mp4">
+    Seu navegador não suporta o elemento de vídeo.
+  </video>
+</div>
