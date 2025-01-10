@@ -45,7 +45,22 @@ Irei explicar sobre o 2xx, que foi utilizado na aplicação.
     - 200 OK: A solicitação foi bem-sucedida e o servidor retornou os dados solicitados. Bastante utilizado.
     - 201 Created: A solicitação foi bem-sucedida e um novo recurso foi criado. Usado principalmente no post.
     - 204 No Content: A solicitação foi bem-sucedida, mas não há conteúdo para retornar. Usado mais no delete.
+
+## 👣 Passo a Passo para Execução
+ Para rodar a API você terá que ter em editor de código-fonte, git e ter instalado o Node.js.
  
-    - ## 👣 Passo a Passo para Execução
- 
-    - 
+ **Clonando o Repositório:**
+Para clonar o projeto, execute o seguinte comando:
+```
+git clone https://github.com/SeuUsuario/NomeDoRepositorio.git
+cd NomeDoRepositorio
+```
+**Instalando Dependências:**
+```
+npm i
+```
+**Executando o Projeto:**
+```
+npm run dev
+```
+  
