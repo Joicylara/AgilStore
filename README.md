@@ -160,4 +160,4 @@ Para complementar o projeto, e fazer alguns testes, foi desenvolvido um front-en
 ## Conclusão
 A API AgilStore é uma solução eficiente para o gerenciamento de inventário, permitindo que uma loja administre produtos de maneira prática e escalável. Este projeto ilustra a integração entre uma aplicação back-end e front-end.
 
-Obrigado por explorar este projeto, caso tenha dúvidas ou sugestões, abra uma issue ou entre em contato.
+Obrigada por explorar este projeto, caso tenha dúvidas ou sugestões, abra uma issue ou entre em contato.
