@@ -15,7 +15,7 @@ Esta API foi desenvolvida para solucionar um dos desafios propostos pelo Process
 - [Git Bash](https://git-scm.com/downloads) - Ferramenta para o controle de versionamento;
 - [Visual Studio Code](https://code.visualstudio.com/download) - Editor de código-fonte gratuito, para o desenvolvimento da aplicação.
 
-- ### 📜 Algumas informações importantes para melhor entendimento
+## 📜 Algumas informações importantes para melhor entendimento
 
 - O que é API?
   
